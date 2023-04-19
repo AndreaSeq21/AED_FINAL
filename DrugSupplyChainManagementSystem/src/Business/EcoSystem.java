@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Business;
 
 import Business.Disease.DiseaseDirectory;
@@ -18,7 +15,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author riyavirani
+ * @author Bhagyashri Chavan
  */
 public class EcoSystem extends Organization{
     
@@ -31,7 +28,7 @@ public class EcoSystem extends Organization{
     private VaccineDirectory vaccineDirectory;
     private DiseaseDirectory diseaseDirectory;
     
-  
+   
     
     public static EcoSystem getInstance(){
         if (business == null){
