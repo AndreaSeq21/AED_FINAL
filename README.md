@@ -30,3 +30,14 @@ Organization: ManufactureOrganization, ClinicOrganization, DistributorOrganizati
 Roles: ProviderRole, ManufacturerRole, StateHealthDepartmentRole, MedicalOfficer, FDAEmployeeRole, PatientRole, ClinicProviderRole, DistributorRole
 
 Conclusion : Effective drug supply chain management is essential for ensuring that patients have access to safe, effective, and affordable drugs. It can also help reduce drug shortages, minimize waste, and improve patient outcomes.
+
+Contributions :
+
+Andrea Sequeria:
+FDA enterprise, Enterprise Admin, State Health Department Enterprise, Validations, Integration with Java Classes.
+
+Bhagyashri Chavan:
+System Admin panels, Distributor enterprise, Clinic enterprise, Mail feature, Integration with Java Classes. 
+
+Rutuja Patil:
+Manufacturer enterprise, Dashboards, Patient enterprise, Provider enterprise, Integration with Java Classes.
