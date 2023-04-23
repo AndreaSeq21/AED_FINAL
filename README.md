@@ -1,4 +1,4 @@
-                                                            DRUG SUPPLY CHAIN MANAGEMENT : 
+                                                      DRUG SUPPLY CHAIN MANAGEMENT : 
 
 ![SC](https://user-images.githubusercontent.com/122659746/233871877-692a2295-d7b3-4236-81db-1c79e63a186f.gif)
 
