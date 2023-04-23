@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package UserInterface.SystemAdmin;
 
 import Business.EcoSystem;
@@ -21,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author riyavirani
+ * @author Bhagyashri Chavan
  */
 public class ManageFDAAdminUserAccountJPanel extends javax.swing.JPanel {
 
@@ -227,17 +224,17 @@ public class ManageFDAAdminUserAccountJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(252, 208, 230));
 
-        lblTitle.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Sitka Text", 3, 24)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(0, 0, 102));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Manage FDA Admin");
 
-        lblLastName.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblLastName.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblLastName.setForeground(new java.awt.Color(0, 0, 102));
         lblLastName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblLastName.setText("Last Name:");
 
-        lblFirstName.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblFirstName.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblFirstName.setForeground(new java.awt.Color(0, 0, 102));
         lblFirstName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblFirstName.setText("First Name:");
@@ -252,7 +249,7 @@ public class ManageFDAAdminUserAccountJPanel extends javax.swing.JPanel {
         });
 
         btnRemoveAdmin.setBackground(new java.awt.Color(134, 134, 242));
-        btnRemoveAdmin.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnRemoveAdmin.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnRemoveAdmin.setText("Remove Admin");
         btnRemoveAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -261,7 +258,7 @@ public class ManageFDAAdminUserAccountJPanel extends javax.swing.JPanel {
         });
 
         btnCreateAdmin.setBackground(new java.awt.Color(134, 134, 242));
-        btnCreateAdmin.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnCreateAdmin.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnCreateAdmin.setText("Create Admin");
         btnCreateAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -295,16 +292,16 @@ public class ManageFDAAdminUserAccountJPanel extends javax.swing.JPanel {
         tblAdminDetails.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tblAdminDetails);
 
-        lblPassword.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblPassword.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblPassword.setForeground(new java.awt.Color(0, 0, 102));
         lblPassword.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblPassword.setText("Password:");
 
-        lblAdminList.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblAdminList.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblAdminList.setForeground(new java.awt.Color(0, 0, 102));
         lblAdminList.setText("List of Admins:");
 
-        lblUsername.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblUsername.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblUsername.setForeground(new java.awt.Color(0, 0, 102));
         lblUsername.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblUsername.setText("UserName:");

@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 
 package UserInterface.SystemAdmin;
 
@@ -14,7 +10,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author riyavirani
+ * @author Bhagyashri Chavan
  */
 public class ManageStateJPanel extends javax.swing.JPanel {
 
@@ -91,7 +87,7 @@ public class ManageStateJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(252, 208, 230));
 
-        lblTitle.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Sitka Text", 3, 24)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(0, 0, 102));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Manage States");
@@ -119,7 +115,7 @@ public class ManageStateJPanel extends javax.swing.JPanel {
             tblStateDetails.getColumnModel().getColumn(0).setResizable(false);
         }
 
-        lblStateName.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblStateName.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblStateName.setForeground(new java.awt.Color(0, 0, 102));
         lblStateName.setText("State Name:");
 
@@ -129,7 +125,7 @@ public class ManageStateJPanel extends javax.swing.JPanel {
         comboBoxAddedStateList.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         btnAddState.setBackground(new java.awt.Color(134, 134, 242));
-        btnAddState.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnAddState.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnAddState.setText("Add State");
         btnAddState.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,7 +134,7 @@ public class ManageStateJPanel extends javax.swing.JPanel {
         });
 
         btnRemoveState.setBackground(new java.awt.Color(134, 134, 242));
-        btnRemoveState.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnRemoveState.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnRemoveState.setText("Remove");
         btnRemoveState.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
