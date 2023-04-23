@@ -41,7 +41,7 @@
         <Container class="javax.swing.JPanel" name="loginPanel">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="8a" green="2c" red="c7" type="rgb"/>
+              <Color blue="ff" green="99" red="99" type="rgb"/>
             </Property>
           </Properties>
           <Constraints>
@@ -56,7 +56,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblWelcomePage" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lblWelcomePage" alignment="0" pref="189" max="32767" attributes="0"/>
                           <Component id="lblUsernameField" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtUsername" alignment="0" max="32767" attributes="0"/>
                           <Component id="lblPasswordField" alignment="0" max="32767" attributes="0"/>
@@ -72,8 +72,8 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                      <Component id="lblWelcomePage" linkSize="2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="163" max="32767" attributes="0"/>
+                      <Component id="lblWelcomePage" min="-2" pref="37" max="-2" attributes="0"/>
+                      <EmptySpace pref="156" max="32767" attributes="0"/>
                       <Component id="lblUsernameField" linkSize="2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="txtUsername" linkSize="2" min="-2" max="-2" attributes="0"/>
@@ -94,7 +94,7 @@
             <Component class="javax.swing.JLabel" name="lblWelcomePage">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Comic Sans MS" size="18" style="1"/>
+                  <Font name="Sitka Text" size="18" style="3"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="66" green="33" red="0" type="rgb"/>
@@ -106,7 +106,7 @@
             <Component class="javax.swing.JLabel" name="lblUsernameField">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Comic Sans MS" size="14" style="1"/>
+                  <Font name="Sitka Text" size="14" style="3"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="66" green="0" red="0" type="rgb"/>
@@ -119,7 +119,7 @@
             <Component class="javax.swing.JLabel" name="lblPasswordField">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Comic Sans MS" size="14" style="1"/>
+                  <Font name="Sitka Text" size="14" style="3"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="66" green="0" red="0" type="rgb"/>
@@ -132,7 +132,7 @@
             <Component class="javax.swing.JButton" name="btnLoginUser">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="f2" green="86" red="86" type="rgb"/>
+                  <Color blue="99" green="99" red="99" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Comic Sans MS" size="14" style="2"/>
@@ -149,7 +149,7 @@
             <Component class="javax.swing.JButton" name="btnLogoutUser">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="f2" green="86" red="86" type="rgb"/>
+                  <Color blue="99" green="99" red="99" type="rgb"/>
                 </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Comic Sans MS" size="14" style="2"/>
@@ -193,15 +193,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lblProjectName" alignment="0" max="32767" attributes="0"/>
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="lbl5100" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                                          <Component id="lblBy" max="32767" attributes="0"/>
-                                          <EmptySpace min="-2" pref="121" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
+                                  <Component id="lblProjectName" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
@@ -210,36 +202,16 @@
                               </Group>
                           </Group>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="223" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="lblMember3" min="-2" pref="134" max="-2" attributes="0"/>
-                              <Component id="lblMember2" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblMember1" min="-2" pref="134" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                          <Component id="lblProjectName" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="119" max="32767" attributes="0"/>
-                          <Component id="lblImage" min="-2" pref="347" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lbl5100" linkSize="1" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                              <Component id="lblBy" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lblMember1" linkSize="1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lblMember2" linkSize="1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lblMember3" linkSize="1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
+                          <Component id="lblProjectName" min="-2" pref="74" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="lblImage" pref="484" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="224" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -248,53 +220,18 @@
                 <Component class="javax.swing.JLabel" name="lblProjectName">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Futura" size="36" style="1"/>
+                      <Font name="Sitka Text" size="36" style="3"/>
                     </Property>
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="66" green="0" red="0" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="text" type="java.lang.String" value="DRUG SUPPLY CHAIN SYSTEM"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="lbl5100">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Dialog" size="20" style="1"/>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                        <LineBorder/>
+                      </Border>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="FINAL PROJECT - INFO 5100"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="lblBy">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Dialog" size="20" style="1"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="PRESENTED BY - "/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="lblMember1">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Dialog" size="14" style="1"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Andrea Sequeria"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="lblMember2">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Dialog" size="14" style="1"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Bhagyashri Chavan"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="lblMember3">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Dialog" size="14" style="1"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Rutuja Patil"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lblImage">
