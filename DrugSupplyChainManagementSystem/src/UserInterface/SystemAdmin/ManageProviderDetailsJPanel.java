@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package UserInterface.SystemAdmin;
 
 import Business.EcoSystem;
@@ -17,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author riyavirani
+ * @author Bhagyashri Chavan
  */
 public class ManageProviderDetailsJPanel extends javax.swing.JPanel {
 
@@ -98,12 +95,12 @@ public class ManageProviderDetailsJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(252, 208, 230));
 
-        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Sitka Text", 3, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 102));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage Providers");
 
-        lblState.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblState.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblState.setForeground(new java.awt.Color(0, 0, 102));
         lblState.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblState.setText("State:");
@@ -118,7 +115,7 @@ public class ManageProviderDetailsJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblCity.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblCity.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblCity.setForeground(new java.awt.Color(0, 0, 102));
         lblCity.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblCity.setText("City:");
@@ -154,7 +151,7 @@ public class ManageProviderDetailsJPanel extends javax.swing.JPanel {
         }
 
         btnRemoveProvider.setBackground(new java.awt.Color(134, 134, 242));
-        btnRemoveProvider.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnRemoveProvider.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnRemoveProvider.setText("Remove Provider");
         btnRemoveProvider.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,7 +162,7 @@ public class ManageProviderDetailsJPanel extends javax.swing.JPanel {
         jSeparator1.setBackground(new java.awt.Color(0, 0, 102));
         jSeparator1.setForeground(new java.awt.Color(0, 0, 102));
 
-        lblProviderName.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblProviderName.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblProviderName.setForeground(new java.awt.Color(0, 0, 102));
         lblProviderName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblProviderName.setText("Provider Name:");
@@ -173,7 +170,7 @@ public class ManageProviderDetailsJPanel extends javax.swing.JPanel {
         txtProviderName.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
 
         btnAddProvider.setBackground(new java.awt.Color(134, 134, 242));
-        btnAddProvider.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnAddProvider.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnAddProvider.setText("Add Provider");
         btnAddProvider.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

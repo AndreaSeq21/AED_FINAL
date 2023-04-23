@@ -100,7 +100,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Comic Sans MS" size="24" style="1"/>
+          <Font name="Sitka Text" size="24" style="3"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="66" green="0" red="0" type="rgb"/>
@@ -112,7 +112,7 @@
     <Component class="javax.swing.JLabel" name="lblState">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Comic Sans MS" size="14" style="1"/>
+          <Font name="Sitka Text" size="14" style="3"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="66" green="0" red="0" type="rgb"/>
@@ -148,7 +148,7 @@
     <Component class="javax.swing.JLabel" name="lblCity">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Comic Sans MS" size="14" style="1"/>
+          <Font name="Sitka Text" size="14" style="3"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="66" green="0" red="0" type="rgb"/>
@@ -229,7 +229,7 @@
           <Color blue="f2" green="86" red="86" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Comic Sans MS" size="14" style="1"/>
+          <Font name="Sitka Text" size="14" style="3"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Remove Provider"/>
       </Properties>
@@ -250,7 +250,7 @@
     <Component class="javax.swing.JLabel" name="lblProviderName">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Comic Sans MS" size="14" style="1"/>
+          <Font name="Sitka Text" size="14" style="3"/>
         </Property>
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="66" green="0" red="0" type="rgb"/>
@@ -272,7 +272,7 @@
           <Color blue="f2" green="86" red="86" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Comic Sans MS" size="14" style="1"/>
+          <Font name="Sitka Text" size="14" style="3"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Add Provider"/>
       </Properties>

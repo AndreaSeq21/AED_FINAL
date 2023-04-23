@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package UserInterface.SystemAdmin;
 
 import Business.EcoSystem;
@@ -13,7 +10,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author riyavirani
+ * @author Bhagyashri Chavan
  */
 public class ManageManufacturerDetailsJPanel extends javax.swing.JPanel {
 
@@ -73,7 +70,7 @@ public class ManageManufacturerDetailsJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(252, 208, 230));
 
-        lblTitle.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Sitka Text", 3, 24)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(0, 0, 102));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Manage Manufacturers");
@@ -101,7 +98,7 @@ public class ManageManufacturerDetailsJPanel extends javax.swing.JPanel {
         tblManufacturerDetails.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
         btnCreateAdmin.setBackground(new java.awt.Color(134, 134, 242));
-        btnCreateAdmin.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnCreateAdmin.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnCreateAdmin.setText("Create Admin");
         btnCreateAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,7 +107,7 @@ public class ManageManufacturerDetailsJPanel extends javax.swing.JPanel {
         });
 
         btnRemoveManufacturer.setBackground(new java.awt.Color(134, 134, 242));
-        btnRemoveManufacturer.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnRemoveManufacturer.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnRemoveManufacturer.setText("Remove");
         btnRemoveManufacturer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,12 +118,12 @@ public class ManageManufacturerDetailsJPanel extends javax.swing.JPanel {
         jSeparator1.setBackground(new java.awt.Color(0, 0, 102));
         jSeparator1.setForeground(new java.awt.Color(0, 0, 102));
 
-        lblManufacturerName.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblManufacturerName.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblManufacturerName.setForeground(new java.awt.Color(0, 0, 102));
         lblManufacturerName.setText("Manufacturer Name: ");
 
         btnadd.setBackground(new java.awt.Color(134, 134, 242));
-        btnadd.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnadd.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnadd.setText("Add Manufacturer");
         btnadd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

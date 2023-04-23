@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package UserInterface.SystemAdmin;
 
 import Business.EcoSystem;
@@ -13,7 +10,7 @@ import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 /**
  *
- * @author riyavirani
+ * @author Bhagyashri Chavan
  */
 public class ManageCityListJPanel extends javax.swing.JPanel {
 
@@ -93,12 +90,12 @@ public class ManageCityListJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(252, 208, 230));
 
         lblTitle.setBackground(new java.awt.Color(255, 255, 255));
-        lblTitle.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Sitka Text", 3, 24)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(0, 0, 102));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Manage City");
 
-        lblState.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblState.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblState.setForeground(new java.awt.Color(0, 0, 102));
         lblState.setText("State:");
 
@@ -132,14 +129,14 @@ public class ManageCityListJPanel extends javax.swing.JPanel {
         tblCityList.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tblCityList);
 
-        lblCityName.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblCityName.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblCityName.setForeground(new java.awt.Color(0, 0, 102));
         lblCityName.setText("City Name:");
 
         txtCityName.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
 
         btnAddCityName.setBackground(new java.awt.Color(134, 134, 242));
-        btnAddCityName.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnAddCityName.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnAddCityName.setText("Add City");
         btnAddCityName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,8 +145,8 @@ public class ManageCityListJPanel extends javax.swing.JPanel {
         });
 
         btnRemoveCity.setBackground(new java.awt.Color(134, 134, 242));
-        btnRemoveCity.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        btnRemoveCity.setText("Remove City");
+        btnRemoveCity.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
+        btnRemoveCity.setText("Delete City");
         btnRemoveCity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRemoveCityActionPerformed(evt);
@@ -207,7 +204,7 @@ public class ManageCityListJPanel extends javax.swing.JPanel {
                     .addComponent(lblCityName)
                     .addComponent(txtCityName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAddCityName, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(172, Short.MAX_VALUE))
+                .addContainerGap(175, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAddCityName, btnRemoveCity, lblCityName, txtCityName});

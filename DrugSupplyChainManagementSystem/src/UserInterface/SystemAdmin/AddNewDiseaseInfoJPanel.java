@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package UserInterface.SystemAdmin;
 
 import Business.EcoSystem;
@@ -12,7 +9,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 /**
  *
- * @author riyavirani
+ * @author Bhagyashri Chavan
  */
 public class AddNewDiseaseInfoJPanel extends javax.swing.JPanel {
 
@@ -52,31 +49,31 @@ public class AddNewDiseaseInfoJPanel extends javax.swing.JPanel {
 
         jDateUpdateDate.setDateFormatString(" MMM, d yyyy");
 
-        lblLastUpdateDate.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblLastUpdateDate.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblLastUpdateDate.setForeground(new java.awt.Color(0, 0, 102));
         lblLastUpdateDate.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblLastUpdateDate.setText("Last Updated on:");
 
         btnAddDiseaseInformation.setBackground(new java.awt.Color(134, 134, 242));
-        btnAddDiseaseInformation.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        btnAddDiseaseInformation.setText("Add Disease Info");
+        btnAddDiseaseInformation.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
+        btnAddDiseaseInformation.setText("Add Disease Informaion");
         btnAddDiseaseInformation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddDiseaseInformationActionPerformed(evt);
             }
         });
 
-        lblTitle.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Sitka Text", 3, 24)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(0, 0, 102));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitle.setText("Add New Disease Information");
+        lblTitle.setText("Enter Desease Details :");
 
-        lblDiseaseCode.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblDiseaseCode.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblDiseaseCode.setForeground(new java.awt.Color(0, 0, 102));
         lblDiseaseCode.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblDiseaseCode.setText("Disease Code:");
 
-        lblDiseaseName.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblDiseaseName.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblDiseaseName.setForeground(new java.awt.Color(0, 0, 102));
         lblDiseaseName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblDiseaseName.setText("Disease Name:");
@@ -98,23 +95,31 @@ public class AddNewDiseaseInfoJPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 171, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblLastUpdateDate)
-                            .addComponent(lblDiseaseCode, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblDiseaseName, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtDiseaseName, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtDiseaseCode, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jDateUpdateDate, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnAddDiseaseInformation, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 223, Short.MAX_VALUE))
-                    .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 628, Short.MAX_VALUE)))
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 628, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(72, 72, 72)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblLastUpdateDate)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblDiseaseCode, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtDiseaseCode, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblDiseaseName, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jDateUpdateDate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtDiseaseName, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(67, 67, 67))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnAddDiseaseInformation)
+                .addGap(233, 233, 233))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,22 +130,20 @@ public class AddNewDiseaseInfoJPanel extends javax.swing.JPanel {
                 .addComponent(btnBack)
                 .addGap(3, 3, 3)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblDiseaseCode)
-                    .addComponent(txtDiseaseCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtDiseaseCode, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDiseaseName, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblDiseaseName)
-                    .addComponent(txtDiseaseName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(17, 17, 17)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblLastUpdateDate)
-                    .addComponent(jDateUpdateDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(lblDiseaseCode))
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jDateUpdateDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblLastUpdateDate))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addComponent(btnAddDiseaseInformation)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(29, 29, 29))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAddDiseaseInformation, jDateUpdateDate, txtDiseaseCode, txtDiseaseName});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAddDiseaseInformation, jDateUpdateDate, txtDiseaseName});
 
     }// </editor-fold>//GEN-END:initComponents
 
