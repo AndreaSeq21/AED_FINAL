@@ -1,6 +1,9 @@
- DRUG SUPPLY CHAIN MANAGEMENT : 
- Drug supply chain management involves the coordination and management of the process of drug  manufacturing, distribution, and dispensing. It involves the use of technology, logistics, and regulatory compliance to ensure that the right drugs are produced, transported, and delivered to the right place at the right time.
+                                                            DRUG SUPPLY CHAIN MANAGEMENT : 
 
+![SC](https://user-images.githubusercontent.com/122659746/233871877-692a2295-d7b3-4236-81db-1c79e63a186f.gif)
+
+
+ Drug supply chain management involves the coordination and management of the process of drug  manufacturing, distribution, and dispensing. It involves the use of technology, logistics, and regulatory compliance to ensure that the right drugs are produced, transported, and delivered to the right place at the right time.
 
  Problem Statement :
 
