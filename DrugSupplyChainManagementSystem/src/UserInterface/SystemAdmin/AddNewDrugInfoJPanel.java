@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package UserInterface.SystemAdmin;
 
 import Business.EcoSystem;
@@ -14,7 +11,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author riyavirani
+ * @author Bhagyashri Chavan
  */
 public class AddNewDrugInfoJPanel extends javax.swing.JPanel {
 
@@ -67,7 +64,7 @@ public class AddNewDrugInfoJPanel extends javax.swing.JPanel {
 
         jDateLastUpdate.setDateFormatString(" MMM, d yyyy");
 
-        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 102));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel5.setText("Last Updated on:");
@@ -77,7 +74,7 @@ public class AddNewDrugInfoJPanel extends javax.swing.JPanel {
         txtDrugName.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
 
         btnAddDrug.setBackground(new java.awt.Color(134, 134, 242));
-        btnAddDrug.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnAddDrug.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnAddDrug.setText("Add Drug");
         btnAddDrug.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,17 +82,17 @@ public class AddNewDrugInfoJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblTitle.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Sitka Text", 3, 24)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(0, 0, 102));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitle.setText("Add New Drug");
+        lblTitle.setText("Enter New Drug Details :");
 
-        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 102));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Drug Code:");
 
-        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 102));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Drug Name:");
@@ -109,7 +106,7 @@ public class AddNewDrugInfoJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 102));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel6.setText("Disease:");
@@ -132,7 +129,7 @@ public class AddNewDrugInfoJPanel extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 158, Short.MAX_VALUE)
+                                .addGap(0, 162, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addGroup(layout.createSequentialGroup()
@@ -153,7 +150,7 @@ public class AddNewDrugInfoJPanel extends javax.swing.JPanel {
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(btnAddDrug, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(jDateLastUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addGap(0, 159, Short.MAX_VALUE))
+                                .addGap(0, 163, Short.MAX_VALUE))
                             .addComponent(lblTitle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap())))
         );
@@ -180,12 +177,12 @@ public class AddNewDrugInfoJPanel extends javax.swing.JPanel {
                     .addComponent(jLabel3)
                     .addComponent(txtDrugName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(jDateLastUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jDateLastUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5))
                 .addGap(18, 18, 18)
                 .addComponent(btnAddDrug)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAddDrug, comboBoxDiseaseList, jDateLastUpdate, txtDrugCode, txtDrugName});

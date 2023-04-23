@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 
 package UserInterface.SystemAdmin;
 
@@ -14,7 +11,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author riyavirani
+ * @author Bhagyashri Chavan
  */
 public class ManageDrugCatalogJPanel extends javax.swing.JPanel {
 
@@ -64,7 +61,7 @@ public class ManageDrugCatalogJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(252, 208, 230));
 
-        lblTitle.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Sitka Text", 3, 24)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(0, 0, 102));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Manage Drug Catalog");
@@ -94,7 +91,7 @@ public class ManageDrugCatalogJPanel extends javax.swing.JPanel {
         }
 
         btnAddDrug.setBackground(new java.awt.Color(134, 134, 242));
-        btnAddDrug.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnAddDrug.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnAddDrug.setText("Add Drug");
         btnAddDrug.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,7 +100,7 @@ public class ManageDrugCatalogJPanel extends javax.swing.JPanel {
         });
 
         btnRemoveDrug.setBackground(new java.awt.Color(134, 134, 242));
-        btnRemoveDrug.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnRemoveDrug.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnRemoveDrug.setText("Remove Drug");
         btnRemoveDrug.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,7 +109,7 @@ public class ManageDrugCatalogJPanel extends javax.swing.JPanel {
         });
 
         btnRefresh.setBackground(new java.awt.Color(134, 134, 242));
-        btnRefresh.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnRefresh.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnRefresh.setText("Refresh");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

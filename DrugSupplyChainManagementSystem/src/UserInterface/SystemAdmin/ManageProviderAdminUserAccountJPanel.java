@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 
 package UserInterface.SystemAdmin;
 
@@ -23,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author riyavirani
+ * @author Bhagyashri Chavan
  */
 public class ManageProviderAdminUserAccountJPanel extends javax.swing.JPanel {
 
@@ -254,7 +251,7 @@ public class ManageProviderAdminUserAccountJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(252, 208, 230));
 
-        lblTitle.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Sitka Text", 3, 24)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(0, 0, 102));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Manage Provider Admins");
@@ -286,7 +283,7 @@ public class ManageProviderAdminUserAccountJPanel extends javax.swing.JPanel {
         }
 
         btnRemoveAdmin.setBackground(new java.awt.Color(134, 134, 242));
-        btnRemoveAdmin.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnRemoveAdmin.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnRemoveAdmin.setText("Remove Admin");
         btnRemoveAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -297,11 +294,11 @@ public class ManageProviderAdminUserAccountJPanel extends javax.swing.JPanel {
         jSeparator1.setBackground(new java.awt.Color(0, 0, 102));
         jSeparator1.setForeground(new java.awt.Color(0, 0, 102));
 
-        lblNewAdmin.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblNewAdmin.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblNewAdmin.setForeground(new java.awt.Color(0, 0, 102));
         lblNewAdmin.setText("Add New Admin:");
 
-        lblProviderEnterprise.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblProviderEnterprise.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblProviderEnterprise.setForeground(new java.awt.Color(0, 0, 102));
         lblProviderEnterprise.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblProviderEnterprise.setText("Provider Enterprise:");
@@ -311,12 +308,12 @@ public class ManageProviderAdminUserAccountJPanel extends javax.swing.JPanel {
         comboBoxProviderList.setForeground(new java.awt.Color(255, 255, 255));
         comboBoxProviderList.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        lblUserName.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblUserName.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblUserName.setForeground(new java.awt.Color(0, 0, 102));
         lblUserName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblUserName.setText("Username:");
 
-        lblPassword.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblPassword.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblPassword.setForeground(new java.awt.Color(0, 0, 102));
         lblPassword.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblPassword.setText("Password:");
@@ -326,7 +323,7 @@ public class ManageProviderAdminUserAccountJPanel extends javax.swing.JPanel {
         txtPassword.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
 
         btnAddAdmin.setBackground(new java.awt.Color(134, 134, 242));
-        btnAddAdmin.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnAddAdmin.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnAddAdmin.setText("Add Admin");
         btnAddAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -343,14 +340,14 @@ public class ManageProviderAdminUserAccountJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblFirstName.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblFirstName.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblFirstName.setForeground(new java.awt.Color(0, 0, 102));
         lblFirstName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblFirstName.setText("First Name:");
 
         txtFirstName.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
 
-        lblLastName.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblLastName.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblLastName.setForeground(new java.awt.Color(0, 0, 102));
         lblLastName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblLastName.setText("Last Name:");
@@ -432,7 +429,7 @@ public class ManageProviderAdminUserAccountJPanel extends javax.swing.JPanel {
                     .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnAddAdmin)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAddAdmin, comboBoxProviderList, txtFirstName, txtLastName, txtPassword, txtUserName});
