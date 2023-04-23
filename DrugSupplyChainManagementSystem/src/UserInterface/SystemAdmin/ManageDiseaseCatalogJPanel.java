@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package UserInterface.SystemAdmin;
 
 import Business.EcoSystem;
@@ -13,7 +10,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author riyavirani
+ * @author Bhagyashri Chavan
  */
 public class ManageDiseaseCatalogJPanel extends javax.swing.JPanel {
 
@@ -68,7 +65,7 @@ public class ManageDiseaseCatalogJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(252, 208, 230));
 
-        lblTitle.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Sitka Text", 3, 24)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(0, 0, 102));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Manage Disease Catalog");
@@ -94,7 +91,7 @@ public class ManageDiseaseCatalogJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblDiseaseDetailsList);
 
         btnAddDisease.setBackground(new java.awt.Color(134, 134, 242));
-        btnAddDisease.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnAddDisease.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnAddDisease.setText("Add Disease");
         btnAddDisease.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,7 +100,7 @@ public class ManageDiseaseCatalogJPanel extends javax.swing.JPanel {
         });
 
         btnRemoveDisease.setBackground(new java.awt.Color(134, 134, 242));
-        btnRemoveDisease.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnRemoveDisease.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnRemoveDisease.setText("Remove");
         btnRemoveDisease.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,7 +109,7 @@ public class ManageDiseaseCatalogJPanel extends javax.swing.JPanel {
         });
 
         btnRefresh.setBackground(new java.awt.Color(134, 134, 242));
-        btnRefresh.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnRefresh.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnRefresh.setText("Refresh");
         btnRefresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 
 package UserInterface.SystemAdmin;
 
@@ -13,7 +9,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author riyavirani
+ * @author Bhagyashri Chavan
  */
 public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
@@ -45,14 +41,14 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         workContainer = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         mainMenuContainer = new javax.swing.JPanel();
-        btnManageState = new javax.swing.JButton();
-        btnManageCity = new javax.swing.JButton();
-        btnManageManufacturer = new javax.swing.JButton();
         btnManageProvider = new javax.swing.JButton();
         btnManageDrugCatalog = new javax.swing.JButton();
         btnManageDiseaseCatalog = new javax.swing.JButton();
         btnManageUserAccount = new javax.swing.JButton();
         lblSysAdmin = new javax.swing.JLabel();
+        btnManageManufacturer = new javax.swing.JButton();
+        btnManageCity = new javax.swing.JButton();
+        btnManageState = new javax.swing.JButton();
 
         setForeground(new java.awt.Color(204, 204, 255));
         setLayout(new java.awt.BorderLayout());
@@ -70,11 +66,11 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 640, Short.MAX_VALUE)
+            .addGap(0, 639, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 563, Short.MAX_VALUE)
+            .addGap(0, 561, Short.MAX_VALUE)
         );
 
         workContainer.add(jPanel1, "card2");
@@ -83,35 +79,8 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         mainMenuContainer.setBackground(new java.awt.Color(227, 102, 178));
 
-        btnManageState.setBackground(new java.awt.Color(134, 134, 242));
-        btnManageState.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        btnManageState.setText("Manage States ");
-        btnManageState.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageStateActionPerformed(evt);
-            }
-        });
-
-        btnManageCity.setBackground(new java.awt.Color(134, 134, 242));
-        btnManageCity.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        btnManageCity.setText("Manage Cities");
-        btnManageCity.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageCityActionPerformed(evt);
-            }
-        });
-
-        btnManageManufacturer.setBackground(new java.awt.Color(134, 134, 242));
-        btnManageManufacturer.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
-        btnManageManufacturer.setText("Manage Manufacturers");
-        btnManageManufacturer.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageManufacturerActionPerformed(evt);
-            }
-        });
-
         btnManageProvider.setBackground(new java.awt.Color(134, 134, 242));
-        btnManageProvider.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnManageProvider.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnManageProvider.setText("Manage Providers");
         btnManageProvider.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,7 +89,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         btnManageDrugCatalog.setBackground(new java.awt.Color(134, 134, 242));
-        btnManageDrugCatalog.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnManageDrugCatalog.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnManageDrugCatalog.setText("Manage Drug Catalog");
         btnManageDrugCatalog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,7 +98,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         btnManageDiseaseCatalog.setBackground(new java.awt.Color(134, 134, 242));
-        btnManageDiseaseCatalog.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnManageDiseaseCatalog.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnManageDiseaseCatalog.setText("Manage Disease Catalog");
         btnManageDiseaseCatalog.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -138,7 +107,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
 
         btnManageUserAccount.setBackground(new java.awt.Color(134, 134, 242));
-        btnManageUserAccount.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnManageUserAccount.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnManageUserAccount.setText("Manage User Accounts");
         btnManageUserAccount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,10 +115,37 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
-        lblSysAdmin.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        lblSysAdmin.setFont(new java.awt.Font("Sitka Text", 3, 18)); // NOI18N
         lblSysAdmin.setForeground(new java.awt.Color(0, 0, 102));
         lblSysAdmin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSysAdmin.setText("ADMIN");
+
+        btnManageManufacturer.setBackground(new java.awt.Color(134, 134, 242));
+        btnManageManufacturer.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
+        btnManageManufacturer.setText("Manage Manufacturers");
+        btnManageManufacturer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnManageManufacturerActionPerformed(evt);
+            }
+        });
+
+        btnManageCity.setBackground(new java.awt.Color(134, 134, 242));
+        btnManageCity.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
+        btnManageCity.setText("Manage Cities");
+        btnManageCity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnManageCityActionPerformed(evt);
+            }
+        });
+
+        btnManageState.setBackground(new java.awt.Color(134, 134, 242));
+        btnManageState.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
+        btnManageState.setText("Manage States ");
+        btnManageState.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnManageStateActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout mainMenuContainerLayout = new javax.swing.GroupLayout(mainMenuContainer);
         mainMenuContainer.setLayout(mainMenuContainerLayout);
@@ -159,13 +155,16 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(mainMenuContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnManageDrugCatalog, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnManageDiseaseCatalog, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnManageUserAccount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnManageManufacturer, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnManageProvider, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnManageState, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnManageCity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblSysAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lblSysAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(mainMenuContainerLayout.createSequentialGroup()
+                        .addGroup(mainMenuContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(btnManageDiseaseCatalog, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(btnManageProvider, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnManageManufacturer, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnManageCity, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnManageState, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         mainMenuContainerLayout.setVerticalGroup(
@@ -187,7 +186,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(btnManageDrugCatalog)
                 .addGap(18, 18, 18)
                 .addComponent(btnManageUserAccount)
-                .addContainerGap(145, Short.MAX_VALUE))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(mainMenuContainer);

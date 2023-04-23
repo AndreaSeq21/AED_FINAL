@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 
 package UserInterface.SystemAdmin;
 
@@ -22,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author riyavirani
+ * @author Bhagyashri Chavan
  */
 public class ManageManufactureAdminUserAccountJPanel extends javax.swing.JPanel {
 
@@ -230,12 +227,12 @@ public class ManageManufactureAdminUserAccountJPanel extends javax.swing.JPanel 
 
         setBackground(new java.awt.Color(252, 208, 230));
 
-        lblTitle.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Sitka Text", 3, 24)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(0, 0, 102));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Manage Manufacturer Admin");
 
-        lblAdminList.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblAdminList.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblAdminList.setForeground(new java.awt.Color(0, 0, 102));
         lblAdminList.setText("List of Admins:");
 
@@ -265,7 +262,7 @@ public class ManageManufactureAdminUserAccountJPanel extends javax.swing.JPanel 
         }
 
         btnRemoveAdmin.setBackground(new java.awt.Color(134, 134, 242));
-        btnRemoveAdmin.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnRemoveAdmin.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnRemoveAdmin.setText("Remove Admin");
         btnRemoveAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -276,28 +273,28 @@ public class ManageManufactureAdminUserAccountJPanel extends javax.swing.JPanel 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 102));
         jSeparator1.setForeground(new java.awt.Color(0, 0, 102));
 
-        lblFirstName.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblFirstName.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblFirstName.setForeground(new java.awt.Color(0, 0, 102));
         lblFirstName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblFirstName.setText("First Name:");
 
-        lblLastName.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblLastName.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblLastName.setForeground(new java.awt.Color(0, 0, 102));
         lblLastName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblLastName.setText("Last Name:");
 
-        lblUsername.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblUsername.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblUsername.setForeground(new java.awt.Color(0, 0, 102));
         lblUsername.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblUsername.setText("UserName:");
 
-        lblPassword.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblPassword.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblPassword.setForeground(new java.awt.Color(0, 0, 102));
         lblPassword.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblPassword.setText("Password:");
 
         btnCreateAdmin.setBackground(new java.awt.Color(134, 134, 242));
-        btnCreateAdmin.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnCreateAdmin.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnCreateAdmin.setText("Create Admin");
         btnCreateAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -340,7 +337,7 @@ public class ManageManufactureAdminUserAccountJPanel extends javax.swing.JPanel 
                                     .addComponent(txtPassword)
                                     .addComponent(txtUserName)))
                             .addComponent(btnCreateAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(130, 509, Short.MAX_VALUE))
+                        .addGap(130, 515, Short.MAX_VALUE))
                     .addComponent(jSeparator1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

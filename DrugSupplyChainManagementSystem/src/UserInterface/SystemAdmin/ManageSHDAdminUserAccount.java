@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package UserInterface.SystemAdmin;
 
 import Business.EcoSystem;
@@ -21,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author riyavirani
+ * @author Bhagyashri Chavan
  */
 public class ManageSHDAdminUserAccount extends javax.swing.JPanel {
 
@@ -240,31 +237,31 @@ public class ManageSHDAdminUserAccount extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(252, 208, 230));
 
-        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 102));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel5.setText("First Name:");
 
         txtFirstName.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
 
-        lblTitle.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Sitka Text", 3, 24)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(0, 0, 102));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Manage State Health Department Admin");
 
-        jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 102));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel6.setText("Last Name:");
 
         txtLastName.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
 
-        jLabel7.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 102));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel7.setText("UserName:");
 
-        lblAdminList.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblAdminList.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblAdminList.setForeground(new java.awt.Color(0, 0, 102));
         lblAdminList.setText("List of Admins:");
 
@@ -290,7 +287,7 @@ public class ManageSHDAdminUserAccount extends javax.swing.JPanel {
         tblSHDAdminDetails.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tblSHDAdminDetails);
 
-        jLabel8.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 0, 102));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel8.setText("Password:");
@@ -298,7 +295,7 @@ public class ManageSHDAdminUserAccount extends javax.swing.JPanel {
         txtPassword.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
 
         btnRemoveAdmin.setBackground(new java.awt.Color(134, 134, 242));
-        btnRemoveAdmin.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnRemoveAdmin.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnRemoveAdmin.setText("Remove Admin");
         btnRemoveAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -307,7 +304,7 @@ public class ManageSHDAdminUserAccount extends javax.swing.JPanel {
         });
 
         btnCreateAdmin.setBackground(new java.awt.Color(134, 134, 242));
-        btnCreateAdmin.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnCreateAdmin.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         btnCreateAdmin.setText("Create Admin");
         btnCreateAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -327,7 +324,7 @@ public class ManageSHDAdminUserAccount extends javax.swing.JPanel {
             }
         });
 
-        lblSHDept.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblSHDept.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
         lblSHDept.setForeground(new java.awt.Color(0, 0, 102));
         lblSHDept.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblSHDept.setText("State Health Department:");
@@ -416,7 +413,7 @@ public class ManageSHDAdminUserAccount extends javax.swing.JPanel {
                     .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnCreateAdmin)
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnCreateAdmin, comboBoxDepartmentList, txtFirstName, txtLastName, txtPassword, txtUserName});

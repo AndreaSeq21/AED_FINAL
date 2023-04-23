@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package UserInterface.SystemAdmin;
 
 import Business.EcoSystem;
@@ -10,7 +7,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author riyavirani
+ * @author Bhagyashri Chavan
  */
 public class ManageUserAccountJPanel extends javax.swing.JPanel {
 
@@ -44,85 +41,53 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
         btnManageSHAdmin = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(252, 208, 230));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblTitle.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
+        lblTitle.setFont(new java.awt.Font("Sitka Text", 3, 24)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(0, 0, 102));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("Manage User Account");
+        add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 808, -1));
 
         btnMangeFDAAdmin.setBackground(new java.awt.Color(134, 134, 242));
-        btnMangeFDAAdmin.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        btnMangeFDAAdmin.setFont(new java.awt.Font("Sitka Text", 3, 18)); // NOI18N
         btnMangeFDAAdmin.setText("Manage FDA Admin");
         btnMangeFDAAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMangeFDAAdminActionPerformed(evt);
             }
         });
+        add(btnMangeFDAAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 118, 415, 66));
 
         btnMangeDistributorAdmin.setBackground(new java.awt.Color(134, 134, 242));
-        btnMangeDistributorAdmin.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        btnMangeDistributorAdmin.setFont(new java.awt.Font("Sitka Text", 3, 18)); // NOI18N
         btnMangeDistributorAdmin.setText("Manage Distributor Admin");
         btnMangeDistributorAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMangeDistributorAdminActionPerformed(evt);
             }
         });
+        add(btnMangeDistributorAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 308, 415, 66));
 
         btnManageProviderAdmin.setBackground(new java.awt.Color(134, 134, 242));
-        btnManageProviderAdmin.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        btnManageProviderAdmin.setFont(new java.awt.Font("Sitka Text", 3, 18)); // NOI18N
         btnManageProviderAdmin.setText("Manage Provider Admin");
         btnManageProviderAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageProviderAdminActionPerformed(evt);
             }
         });
+        add(btnManageProviderAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 409, 415, 66));
 
         btnManageSHAdmin.setBackground(new java.awt.Color(134, 134, 242));
-        btnManageSHAdmin.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
+        btnManageSHAdmin.setFont(new java.awt.Font("Sitka Text", 3, 18)); // NOI18N
         btnManageSHAdmin.setText("Manage State Health Admin");
         btnManageSHAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnManageSHAdminActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(72, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnMangeFDAAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnMangeDistributorAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnManageProviderAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnManageSHAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(73, Short.MAX_VALUE))
-            .addComponent(lblTitle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnManageProviderAdmin, btnManageSHAdmin, btnMangeDistributorAdmin, btnMangeFDAAdmin});
-
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblTitle)
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnMangeFDAAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
-                    .addComponent(btnManageSHAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(50, 50, 50)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnMangeDistributorAdmin)
-                    .addComponent(btnManageProviderAdmin))
-                .addContainerGap(50, Short.MAX_VALUE))
-        );
-
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnManageProviderAdmin, btnMangeDistributorAdmin, btnMangeFDAAdmin});
-
+        add(btnManageSHAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 212, 415, 66));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageProviderAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageProviderAdminActionPerformed
