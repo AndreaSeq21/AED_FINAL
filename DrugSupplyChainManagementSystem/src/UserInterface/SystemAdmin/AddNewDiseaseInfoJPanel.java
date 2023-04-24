@@ -4,9 +4,12 @@ package UserInterface.SystemAdmin;
 import Business.EcoSystem;
 import Business.Disease.Disease;
 import java.awt.CardLayout;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import java.util.regex.Pattern;
 /**
  *
  * @author Bhagyashri Chavan
@@ -103,23 +106,24 @@ public class AddNewDiseaseInfoJPanel extends javax.swing.JPanel {
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGap(72, 72, 72)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblLastUpdateDate)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblDiseaseCode, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtDiseaseCode, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblDiseaseCode, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblDiseaseName, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jDateUpdateDate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtDiseaseName, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(67, 67, 67))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblLastUpdateDate)
+                                .addGap(18, 18, 18)
+                                .addComponent(jDateUpdateDate, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtDiseaseCode, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lblDiseaseName, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtDiseaseName, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(258, 258, 258)
                 .addComponent(btnAddDiseaseInformation)
-                .addGap(233, 233, 233))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,18 +133,19 @@ public class AddNewDiseaseInfoJPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(btnBack)
                 .addGap(3, 3, 3)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtDiseaseCode, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtDiseaseName, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblDiseaseName)
-                    .addComponent(lblDiseaseCode))
-                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jDateUpdateDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblLastUpdateDate))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtDiseaseCode, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDiseaseName, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblDiseaseName)
+                            .addComponent(lblDiseaseCode))
+                        .addGap(32, 32, 32)
+                        .addComponent(lblLastUpdateDate))
+                    .addComponent(jDateUpdateDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
                 .addComponent(btnAddDiseaseInformation)
-                .addGap(29, 29, 29))
+                .addContainerGap())
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAddDiseaseInformation, jDateUpdateDate, txtDiseaseName});
@@ -150,9 +155,13 @@ public class AddNewDiseaseInfoJPanel extends javax.swing.JPanel {
     private void btnAddDiseaseInformationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddDiseaseInformationActionPerformed
         // TODO add your handling code here:
         String diseaseCode = txtDiseaseCode.getText();
+        Pattern pattern = Pattern.compile("^[a-zA-Z]+$");
+        Pattern pattern2 = Pattern.compile("^[0-9]*");
+        int count = 0;
         if(diseaseCode.trim().equalsIgnoreCase(""))
         {
             JOptionPane.showMessageDialog(null, "Please enter a disease Code");
+            count = 1;
             return;
 
         }
@@ -160,13 +169,47 @@ public class AddNewDiseaseInfoJPanel extends javax.swing.JPanel {
         if(diseaseName.trim().equalsIgnoreCase(""))
         {
             JOptionPane.showMessageDialog(null, "Please enter a disease Name");
+             count = 1;
             return;
 
         }
+        if (!(pattern2.matcher(diseaseCode).matches())) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid disease code");
+             count = 1;
+            return;
+        } 
+        
+         if (!(pattern.matcher(diseaseName).matches())) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid disease Name");
+             count = 1;
+            return;
+        } 
+        
+         if (Integer.valueOf(diseaseCode) < 0) {
+            JOptionPane.showMessageDialog(null, "disease code is negative");
+            count = 1;
+            return;
+        } 
+             LocalDate dobValue = jDateUpdateDate.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate(); // convert JDateChooser to LocalDate
+            LocalDate today = LocalDate.now();
+            
+            if (dobValue == null) {
+            JOptionPane.showMessageDialog(null, "Please enter your date.");
+            return;
+            }  else if (dobValue.isAfter(today)) {
+                JOptionPane.showMessageDialog(null, "Invalid date. Date cannot be in the future.");
+                return;
+            } else if (dobValue.isEqual(today)) {
+            JOptionPane.showMessageDialog(null, "Invalid date. Date cannot be today.");
+            return;
+            }  
+        
+        
 
         Date lastUpdatedDate = jDateUpdateDate.getDate();
-
-        for(Disease disease : business.getDiseaseDirectory().getdiseaseDirectory())
+        if(count ==0 )
+        {
+              for(Disease disease : business.getDiseaseDirectory().getdiseaseDirectory())
         {
             if(disease.getDiseaseCode().equalsIgnoreCase(diseaseCode) && disease.getDiseaseName().equalsIgnoreCase(diseaseName))
             {
@@ -184,6 +227,8 @@ public class AddNewDiseaseInfoJPanel extends javax.swing.JPanel {
         txtDiseaseCode.setText("");
         txtDiseaseName.setText("");
         jDateUpdateDate.setDate(null);
+        }
+      
         
         
     }//GEN-LAST:event_btnAddDiseaseInformationActionPerformed

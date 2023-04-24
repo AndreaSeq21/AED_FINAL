@@ -3,6 +3,8 @@ package UserInterface.SystemAdmin;
 
 import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
+import DashboardTrial.AdminDashboard;
+import DashboardTrial.Dashboard;
 //import UserInterface.UpdateUserAccountJPanel;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
@@ -49,6 +51,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         btnManageManufacturer = new javax.swing.JButton();
         btnManageCity = new javax.swing.JButton();
         btnManageState = new javax.swing.JButton();
+        btnViewDashboard = new javax.swing.JButton();
 
         setForeground(new java.awt.Color(204, 204, 255));
         setLayout(new java.awt.BorderLayout());
@@ -66,11 +69,11 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 639, Short.MAX_VALUE)
+            .addGap(0, 1317, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 561, Short.MAX_VALUE)
+            .addGap(0, 1300, Short.MAX_VALUE)
         );
 
         workContainer.add(jPanel1, "card2");
@@ -147,6 +150,15 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnViewDashboard.setBackground(new java.awt.Color(134, 134, 242));
+        btnViewDashboard.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
+        btnViewDashboard.setText("View Dashboard");
+        btnViewDashboard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewDashboardActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout mainMenuContainerLayout = new javax.swing.GroupLayout(mainMenuContainer);
         mainMenuContainer.setLayout(mainMenuContainerLayout);
         mainMenuContainerLayout.setHorizontalGroup(
@@ -164,8 +176,9 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                             .addComponent(btnManageManufacturer, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnManageCity, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(btnManageState, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(btnViewDashboard, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         mainMenuContainerLayout.setVerticalGroup(
             mainMenuContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -186,7 +199,9 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(btnManageDrugCatalog)
                 .addGap(18, 18, 18)
                 .addComponent(btnManageUserAccount)
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnViewDashboard)
+                .addContainerGap(844, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(mainMenuContainer);
@@ -250,6 +265,12 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         layout.next(workContainer);
     }//GEN-LAST:event_btnManageStateActionPerformed
 
+    private void btnViewDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewDashboardActionPerformed
+        // TODO add your handling code here:
+        Dashboard ad = new Dashboard();
+        System.out.println("Inside admin dashboard");
+    }//GEN-LAST:event_btnViewDashboardActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnManageCity;
@@ -259,6 +280,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnManageProvider;
     private javax.swing.JButton btnManageState;
     private javax.swing.JButton btnManageUserAccount;
+    private javax.swing.JButton btnViewDashboard;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JLabel lblSysAdmin;

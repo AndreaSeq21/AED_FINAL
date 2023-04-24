@@ -4,6 +4,7 @@ package UserInterface.SystemAdmin;
 import Business.EcoSystem;
 import Business.NationalEnterprise.Manufacturer;
 import java.awt.CardLayout;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -185,12 +186,17 @@ public class ManageManufacturerDetailsJPanel extends javax.swing.JPanel {
 
     private void btnaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddActionPerformed
         // TODO add your handling code here:
+        Pattern pattern = Pattern.compile("^[a-zA-Z]+$");
         String name = txtManufacturerName.getText();
         if(name.trim().equalsIgnoreCase(""))
         {
             JOptionPane.showMessageDialog(null, "Please enter a Manufacturer name!");
             return;
         }
+        if (!(pattern.matcher(name.trim()).matches())) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid Manufacturer name");
+            return;
+        } 
         
         for(Manufacturer man: business.getManufacturerDirectory().getManufacturerDirectory())
         {
