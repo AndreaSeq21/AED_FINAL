@@ -20,6 +20,7 @@ import Business.Organization.PatientOrganization;
 import Business.Organization.ClinicOrganization;
 import Business.Organization.medicalOrganization;
 import java.awt.CardLayout;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -45,12 +46,12 @@ public class ManageDepartmentJPanel extends javax.swing.JPanel {
         this.enterprise = enterprise;
         populateOrganizationTable();
         populateCombo();
-        txtClinicName.setVisible(false);
-            lblClinicName.setVisible(false);
+        txtClinicname.setVisible(true);
+            lblClinicName1.setVisible(true);
         if(enterprise instanceof HospitalEnterprise)
         {
-            txtClinicName.setVisible(true);
-            lblClinicName.setVisible(true);
+            txtClinicname.setVisible(true);
+            lblClinicName1.setVisible(true);
                 
         }
         
@@ -127,8 +128,8 @@ public class ManageDepartmentJPanel extends javax.swing.JPanel {
         btnAddOrganization = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         lblAddOrganization = new javax.swing.JLabel();
-        lblClinicName = new javax.swing.JLabel();
-        txtClinicName = new javax.swing.JTextField();
+        txtClinicname = new javax.swing.JTextField();
+        lblClinicName1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(252, 208, 230));
 
@@ -185,6 +186,11 @@ public class ManageDepartmentJPanel extends javax.swing.JPanel {
         comboBoxOrganizationList.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         comboBoxOrganizationList.setForeground(new java.awt.Color(255, 255, 255));
         comboBoxOrganizationList.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        comboBoxOrganizationList.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboBoxOrganizationListActionPerformed(evt);
+            }
+        });
 
         btnAddOrganization.setBackground(new java.awt.Color(0, 0, 102));
         btnAddOrganization.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
@@ -203,12 +209,10 @@ public class ManageDepartmentJPanel extends javax.swing.JPanel {
         lblAddOrganization.setForeground(new java.awt.Color(0, 0, 102));
         lblAddOrganization.setText("Add Organization:");
 
-        lblClinicName.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
-        lblClinicName.setForeground(new java.awt.Color(0, 0, 102));
-        lblClinicName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        lblClinicName.setText(" Clinic Name:");
-
-        txtClinicName.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        lblClinicName1.setFont(new java.awt.Font("Sitka Text", 3, 14)); // NOI18N
+        lblClinicName1.setForeground(new java.awt.Color(0, 0, 102));
+        lblClinicName1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblClinicName1.setText(" Clinic Name:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -217,28 +221,35 @@ public class ManageDepartmentJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jSeparator1)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 674, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(lblOrganizationType)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnAddOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(comboBoxOrganizationList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lblClinicName1)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtClinicname, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(140, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblAddOrganization)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lblClinicName)
-                                    .addComponent(lblOrganizationType))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnAddOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(comboBoxOrganizationList, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(txtClinicName, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                                    .addComponent(lblAddOrganization)
+                                    .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(lblTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jSeparator1)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 674, Short.MAX_VALUE))
+                        .addContainerGap())))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lblClinicName, lblOrganizationType});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {comboBoxOrganizationList, txtClinicname});
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {lblClinicName1, lblOrganizationType});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -253,20 +264,20 @@ public class ManageDepartmentJPanel extends javax.swing.JPanel {
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblAddOrganization)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblOrganizationType)
-                    .addComponent(comboBoxOrganizationList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblClinicName)
-                    .addComponent(txtClinicName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(lblOrganizationType)
+                        .addComponent(comboBoxOrganizationList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtClinicname, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblClinicName1)))
+                .addGap(54, 54, 54)
                 .addComponent(btnAddOrganization)
-                .addContainerGap(93, Short.MAX_VALUE))
+                .addContainerGap(124, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAddOrganization, comboBoxOrganizationList, lblAddOrganization, lblClinicName, lblOrganizationType, txtClinicName});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAddOrganization, comboBoxOrganizationList, lblAddOrganization, lblClinicName1, lblOrganizationType});
 
     }// </editor-fold>//GEN-END:initComponents
 
@@ -279,10 +290,21 @@ public class ManageDepartmentJPanel extends javax.swing.JPanel {
 
     private void btnAddOrganizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddOrganizationActionPerformed
         // TODO add your handling code here:
-
+        Pattern pattern = Pattern.compile("^[a-zA-Z]+$");
         Organization.OrganizationType type = (Organization.OrganizationType) comboBoxOrganizationList.getSelectedItem();
         //check if organization exists
-
+        
+        if (!(pattern.matcher(txtClinicname.getText()).matches())) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid Clinic Name");  
+            return;
+        } 
+        
+           if (txtClinicname.getText().trim().equalsIgnoreCase("")) {
+            JOptionPane.showMessageDialog(null, "Clinic Name cannot be null");  
+            return;
+        } 
+        
+        
         //
         boolean corg =false;
         boolean morg =false;
@@ -353,7 +375,7 @@ public class ManageDepartmentJPanel extends javax.swing.JPanel {
         boolean patientOrg=false;
         if( enterprise instanceof HospitalEnterprise)
         {
-            String satClinicName = txtClinicName.getText();
+            String satClinicName = txtClinicname.getText();
 
             for(Organization org : enterprise.getOrganizationDirectory().getOrganizationList())
             {
@@ -391,6 +413,10 @@ public class ManageDepartmentJPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_btnAddOrganizationActionPerformed
 
+    private void comboBoxOrganizationListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxOrganizationListActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboBoxOrganizationListActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddOrganization;
@@ -399,10 +425,10 @@ public class ManageDepartmentJPanel extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lblAddOrganization;
-    private javax.swing.JLabel lblClinicName;
+    private javax.swing.JLabel lblClinicName1;
     private javax.swing.JLabel lblOrganizationType;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JTable tblOrganizationDetails;
-    private javax.swing.JTextField txtClinicName;
+    private javax.swing.JTextField txtClinicname;
     // End of variables declaration//GEN-END:variables
 }

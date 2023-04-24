@@ -51,6 +51,7 @@ public class DistributorEmployeeWorkAreaJPanel extends javax.swing.JPanel {
         jSplitPane1 = new javax.swing.JSplitPane();
         workContainer = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         mainMenu = new javax.swing.JPanel();
         btnManageWareHouse = new javax.swing.JButton();
         btnManufactureShippedOrder = new javax.swing.JButton();
@@ -67,15 +68,23 @@ public class DistributorEmployeeWorkAreaJPanel extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(252, 208, 230));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/Distributor/MicrosoftTeams-image (3).png"))); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 461, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         workContainer.add(jPanel1, "card2");
@@ -146,7 +155,7 @@ public class DistributorEmployeeWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(btnManufactureShippedOrder)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnProviderOrder)
-                .addContainerGap(235, Short.MAX_VALUE))
+                .addContainerGap(574, Short.MAX_VALUE))
         );
 
         jSplitPane1.setTopComponent(mainMenu);
@@ -184,6 +193,7 @@ public class DistributorEmployeeWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnManageWareHouse;
     private javax.swing.JButton btnManufactureShippedOrder;
     private javax.swing.JButton btnProviderOrder;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JLabel lblDistributor;
