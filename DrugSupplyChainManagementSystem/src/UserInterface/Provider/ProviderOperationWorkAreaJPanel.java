@@ -11,6 +11,7 @@ import Business.Enterprise.HospitalEnterprise;
 import Business.Network.StateNetwork;
 import Business.Organization.HospitalOrganization;
 import Business.UserAccount.UserAccount;
+import DashboardTrial.AdminDashboard;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -67,6 +68,7 @@ public class ProviderOperationWorkAreaJPanel extends javax.swing.JPanel {
         btnViewAdministerDrug = new javax.swing.JButton();
         btnRemoteClinicOrder = new javax.swing.JButton();
         lblProvider = new javax.swing.JLabel();
+        btnViewDashboard = new javax.swing.JButton();
 
         setLayout(new java.awt.BorderLayout());
 
@@ -160,6 +162,16 @@ public class ProviderOperationWorkAreaJPanel extends javax.swing.JPanel {
         lblProvider.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblProvider.setText("PROVIDER");
 
+        btnViewDashboard.setBackground(new java.awt.Color(0, 0, 102));
+        btnViewDashboard.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
+        btnViewDashboard.setForeground(new java.awt.Color(255, 255, 255));
+        btnViewDashboard.setText("VIEW DASHBOARD");
+        btnViewDashboard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewDashboardActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout mainMenuLayout = new javax.swing.GroupLayout(mainMenu);
         mainMenu.setLayout(mainMenuLayout);
         mainMenuLayout.setHorizontalGroup(
@@ -173,7 +185,8 @@ public class ProviderOperationWorkAreaJPanel extends javax.swing.JPanel {
                     .addComponent(btnAdministerDrug, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnViewAdministerDrug, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnRemoteClinicOrder, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblProvider, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lblProvider, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnViewDashboard, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         mainMenuLayout.setVerticalGroup(
@@ -193,7 +206,9 @@ public class ProviderOperationWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(btnViewAdministerDrug)
                 .addGap(18, 18, 18)
                 .addComponent(btnRemoteClinicOrder)
-                .addContainerGap(175, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnViewDashboard)
+                .addContainerGap(128, Short.MAX_VALUE))
         );
 
         jSplitPane1.setTopComponent(mainMenu);
@@ -250,6 +265,11 @@ public class ProviderOperationWorkAreaJPanel extends javax.swing.JPanel {
         layout.next(workContainer);
     }//GEN-LAST:event_btnDrugOrderActionPerformed
 
+    private void btnViewDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewDashboardActionPerformed
+        // TODO add your handling code here:
+        AdminDashboard ad = new AdminDashboard();
+    }//GEN-LAST:event_btnViewDashboardActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdministerDrug;
@@ -257,6 +277,7 @@ public class ProviderOperationWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnManageOrder;
     private javax.swing.JButton btnRemoteClinicOrder;
     private javax.swing.JButton btnViewAdministerDrug;
+    private javax.swing.JButton btnViewDashboard;
     private javax.swing.JButton btnViewInventory;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSplitPane jSplitPane1;
