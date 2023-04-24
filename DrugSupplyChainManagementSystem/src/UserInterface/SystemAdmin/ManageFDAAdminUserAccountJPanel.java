@@ -12,6 +12,7 @@ import Business.Role.EnterpriseAdminRole;
 import Business.Role.Role;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -417,6 +418,7 @@ public class ManageFDAAdminUserAccountJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
 
         String firstName = txtFirstName.getText();
+        Pattern pattern = Pattern.compile("^[a-zA-Z]+$");
         if(firstName.trim().equalsIgnoreCase(""))
         {
             JOptionPane.showMessageDialog(null, "Please enter First Name!");
@@ -440,13 +442,37 @@ public class ManageFDAAdminUserAccountJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please enter Password!");
             return;
         }
+          String passwordCheck = txtPassword.getText();
+
+        boolean PASSWORD_PATTERN = Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+=~|?])(?=\\S+$).{8,}$", passwordCheck);
+        if(!PASSWORD_PATTERN){
+            JOptionPane.showMessageDialog(null, "Please create a strong password. Password should be 8 characters long. It must contain alphanumeric characters in upper and lower case along with at least one special character from - !@#$%^&+=~|? ");
+            txtPassword.setText("");
+            return;
+        }
+         if (!(pattern.matcher(firstName.trim()).matches())) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid first name");
+            return;
+        } 
+         
+        if (!(pattern.matcher(lastName.trim()).matches())) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid last name");
+            return;
+        } 
+        
+        if (!(pattern.matcher(username.trim()).matches())) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid user name");
+            return;
+        } 
+         
+        
         boolean check = checkIfUserAccountExists(username);
         if(check == true)
         {
             JOptionPane.showMessageDialog(null, "Username Exists, please enter a new username!");
             return;
-
         }
+        
 
         EnterpriseAdminPerson admin = (EnterpriseAdminPerson) business.getCdc().getPersonDirectory().createPerson(firstName, lastName, Role.RoleType.EnterpriseAdmin);
 

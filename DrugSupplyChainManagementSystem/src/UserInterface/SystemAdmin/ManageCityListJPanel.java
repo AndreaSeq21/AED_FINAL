@@ -5,6 +5,7 @@ import Business.EcoSystem;
 import Business.Network.CityNetwork;
 import Business.Network.StateNetwork;
 import java.awt.CardLayout;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -219,12 +220,18 @@ public class ManageCityListJPanel extends javax.swing.JPanel {
     private void btnAddCityNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddCityNameActionPerformed
         // TODO add your handling code here:
         String city = txtCityName.getText();
+         Pattern pattern = Pattern.compile("^[a-zA-Z]+$");
+        
         if(city.trim().equalsIgnoreCase(""))
         {
             JOptionPane.showMessageDialog(null, "Please Enter a city Name!");
             return;
 
         }
+         if (!(pattern.matcher(city).matches())) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid city Name");
+            return;
+        } 
 
         StateNetwork state = (StateNetwork)comboBoxStateList.getSelectedItem();
 

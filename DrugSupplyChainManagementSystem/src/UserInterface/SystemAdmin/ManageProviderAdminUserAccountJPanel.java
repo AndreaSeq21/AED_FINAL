@@ -14,6 +14,7 @@ import Business.Role.EnterpriseAdminRole;
 import Business.Role.Role.RoleType;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -460,7 +461,7 @@ public class ManageProviderAdminUserAccountJPanel extends javax.swing.JPanel {
 
     private void btnAddAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddAdminActionPerformed
         // TODO add your handling code here:
-        
+        Pattern pattern = Pattern.compile("^[a-zA-Z]+$");
         HospitalEnterprise provider = (HospitalEnterprise) comboBoxProviderList.getSelectedItem();
         String username = txtUserName.getText();
         if(username.trim().equalsIgnoreCase(""))
@@ -487,6 +488,32 @@ public class ManageProviderAdminUserAccountJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please enter a last Name!");
             return;
         }
+        
+          if (!(pattern.matcher(firstName.trim()).matches())) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid first name");
+            return;
+        } 
+         
+        if (!(pattern.matcher(lastName.trim()).matches())) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid last name");
+            return;
+        } 
+        
+        if (!(pattern.matcher(username.trim()).matches())) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid user name");
+            return;
+        } 
+         
+         
+           String passwordCheck = txtPassword.getText();
+
+        
+        boolean PASSWORD_PATTERN = Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+=~|?])(?=\\S+$).{8,}$", passwordCheck);
+        if(!PASSWORD_PATTERN){
+            JOptionPane.showMessageDialog(null, "Please create a strong password. Password should be 8 characters long. It must contain alphanumeric characters in upper and lower case along with at least one special character from - !@#$%^&+=~|? ");
+            txtPassword.setText("");
+            return;
+        }
         boolean check = checkIfUserAccountExists(username);
         if(check == true)
         {
@@ -494,6 +521,7 @@ public class ManageProviderAdminUserAccountJPanel extends javax.swing.JPanel {
             return;
             
         }
+        
         
         EnterpriseAdminPerson admin = (EnterpriseAdminPerson)provider.getPersonDirectory().createPerson(firstName, lastName, RoleType.EnterpriseAdmin);
         provider.getUserAccountDirectory().createUserAccount(username, password, admin, new EnterpriseAdminRole());

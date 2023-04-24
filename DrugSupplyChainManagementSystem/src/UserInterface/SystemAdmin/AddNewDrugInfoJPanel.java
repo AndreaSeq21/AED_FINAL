@@ -5,7 +5,10 @@ import Business.EcoSystem;
 import Business.Disease.Disease;
 import Business.Vaccine.Vaccine;
 import java.awt.CardLayout;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Date;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -191,6 +194,8 @@ public class AddNewDrugInfoJPanel extends javax.swing.JPanel {
 
     private void btnAddDrugActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddDrugActionPerformed
         // TODO add your handling code here:
+        Pattern pattern = Pattern.compile("^[a-zA-Z]+$");
+        Pattern pattern2 = Pattern.compile("^[0-9]*");
         String vaccineCode = txtDrugCode.getText();
         if(vaccineCode.trim().equalsIgnoreCase(""))
         {
@@ -203,6 +208,36 @@ public class AddNewDrugInfoJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please enter vaccine Name!");
             return;
         }
+        
+         if (!(pattern2.matcher(vaccineCode).matches())) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid vaccine code"); 
+            return;
+        } 
+        
+         if (!(pattern.matcher(vaccineName).matches())) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid vaccine Name");
+            return;
+        } 
+        
+         if (Integer.valueOf(vaccineCode) < 0) {
+            JOptionPane.showMessageDialog(null, "vaccine code is negative");
+            return;
+        } 
+        
+          LocalDate dobValue = jDateLastUpdate.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate(); // convert JDateChooser to LocalDate
+            LocalDate today = LocalDate.now();
+            
+            if (dobValue == null) {
+            JOptionPane.showMessageDialog(null, "Please enter your date.");
+            return;
+            }  else if (dobValue.isAfter(today)) {
+                JOptionPane.showMessageDialog(null, "Invalid date. Date cannot be in the future.");
+                return;
+            } else if (dobValue.isEqual(today)) {
+            JOptionPane.showMessageDialog(null, "Invalid date. Date cannot be today.");
+            return;
+            }  
+        
 
         Date lastUpdatedDate = jDateLastUpdate.getDate();
         Disease disease = (Disease)comboBoxDiseaseList.getSelectedItem();

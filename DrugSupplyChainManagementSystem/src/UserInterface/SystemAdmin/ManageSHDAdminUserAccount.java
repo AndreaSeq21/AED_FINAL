@@ -12,6 +12,7 @@ import Business.Role.EnterpriseAdminRole;
 import Business.Role.Role;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -436,7 +437,7 @@ public class ManageSHDAdminUserAccount extends javax.swing.JPanel {
 
     private void btnCreateAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateAdminActionPerformed
         // TODO add your handling code here:
-
+        Pattern pattern = Pattern.compile("^[a-zA-Z]+$");
         StateNetwork state = (StateNetwork)comboBoxDepartmentList.getSelectedItem();
         String firstName = txtFirstName.getText();
         if(firstName.trim().equalsIgnoreCase(""))
@@ -462,6 +463,33 @@ public class ManageSHDAdminUserAccount extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please enter Password!");
             return;
         }
+        String passwordCheck = txtPassword.getText();
+
+        
+        boolean PASSWORD_PATTERN = Pattern.matches("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&+=~|?])(?=\\S+$).{8,}$", passwordCheck);
+        if(!PASSWORD_PATTERN){
+            JOptionPane.showMessageDialog(null, "Please create a strong password. Password should be 8 characters long. It must contain alphanumeric characters in upper and lower case along with at least one special character from - !@#$%^&+=~|? ");
+            txtPassword.setText("");
+            return;
+        }
+                 if (!(pattern.matcher(firstName.trim()).matches())) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid first name");
+            return;
+        } 
+         
+        if (!(pattern.matcher(lastName.trim()).matches())) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid last name");
+            return;
+        } 
+        
+        if (!(pattern.matcher(username.trim()).matches())) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid user name");
+            return;
+        } 
+         
+        
+        
+        
 
         boolean flag = checkIfUserAccountExists(username);
         if(flag == true)
