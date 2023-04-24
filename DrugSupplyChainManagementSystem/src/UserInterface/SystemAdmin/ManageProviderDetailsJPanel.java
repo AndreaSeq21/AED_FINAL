@@ -8,6 +8,7 @@ import Business.Enterprise.HospitalEnterprise;
 import Business.Network.CityNetwork;
 import Business.Network.StateNetwork;
 import java.awt.CardLayout;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -282,13 +283,23 @@ public class ManageProviderDetailsJPanel extends javax.swing.JPanel {
 
     private void btnAddProviderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddProviderActionPerformed
         // TODO add your handling code here:
-        
+        Pattern pattern = Pattern.compile("^[a-zA-Z]+$");
         String name = txtProviderName.getText();
         if(name.trim().equalsIgnoreCase(""))
         {
             JOptionPane.showMessageDialog(null, "Please enter a Provider name!");
             return;
         }
+        
+        
+         if(!(pattern.matcher(name.trim()).matches()))
+        {
+            JOptionPane.showMessageDialog(null, "Please enter a Provider name!");
+            return;
+        }
+         
+         
+         
         
         
         StateNetwork state = (StateNetwork)comboBoxStateList.getSelectedItem();
