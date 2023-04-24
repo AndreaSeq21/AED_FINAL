@@ -17,7 +17,10 @@ import Business.Person.Person;
 import Business.Role.PatientRole;
 import Business.Role.Role.RoleType;
 import Business.UserAccount.UserAccount;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Date;
+import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
@@ -458,6 +461,8 @@ public class RegisterNewPatientJPanel extends javax.swing.JPanel {
     private void btnCreatePatientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreatePatientActionPerformed
         // TODO add your handling code here:
         try{
+            Pattern pattern = Pattern.compile("^[a-zA-Z]+$");
+
             String firstName = txtFirstName.getText();
             String lastName = txtLastName.getText();
             String email = txtEmail.getText();
@@ -480,30 +485,69 @@ public class RegisterNewPatientJPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "First name empty");
                 return;
             }
-            
+            if(!(pattern.matcher(firstName.trim()).matches()))
+            {
+                JOptionPane.showMessageDialog(null, "First name cannot be a number");
+                return;
+            }
+
             if(lastName.trim().equalsIgnoreCase(""))
             {
                 JOptionPane.showMessageDialog(null, "Last name empty");
                 return;
             }
+            if(!(pattern.matcher(lastName.trim()).matches()))
+            {
+                JOptionPane.showMessageDialog(null, "Last name cannot be a number");
+                return;
+            }
+            
+            LocalDate dobValue = jDateDOB.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate(); // convert JDateChooser to LocalDate
+            LocalDate today = LocalDate.now();
+            
+            if (dobValue == null) {
+            JOptionPane.showMessageDialog(null, "Please enter your date of birth.");
+            return;
+            }  else if (dobValue.isAfter(today)) {
+                JOptionPane.showMessageDialog(null, "Invalid date of birth. Date cannot be in the future.");
+                return;
+            } else if (dobValue.isEqual(today)) {
+            JOptionPane.showMessageDialog(null, "Invalid date of birth. Date cannot be today.");
+            return;
+            }  
+                  
+                  
+                  
             
             Person patient = patientOrg.getPersonDirectory().createPerson(firstName, lastName, RoleType.Patient);
-            
-            
-            
-
+                
             patient.setDateOfBirth(dob);
             if(email.trim().equalsIgnoreCase(""))
             {
                 JOptionPane.showMessageDialog(null, "Email empty");
                 return;
             }
+            String emailvalidate = "[a-z0-9!-_.&#*]{2,100}[@][a-z]{3,100}[.][a-z]{3}";
+            Pattern p;
+            p = Pattern.compile(emailvalidate);
+              if (!(p.matcher(email).matches()))
+              {
+                  JOptionPane.showMessageDialog(null, "Email is not in correct");
+              }
+
             patient.setEmail(email);
             if(phoneText.trim().equalsIgnoreCase(""))
             {
                 JOptionPane.showMessageDialog(null, "Phone empty!");
                 return;
             }
+            int a = phoneText.trim().length();
+            if (a < 10)
+            {
+                JOptionPane.showMessageDialog(null, "Phone is not in the correct length!");
+                return;
+            }
+
             patient.setPhone(phone);
             if(username.trim().equalsIgnoreCase(""))
             {

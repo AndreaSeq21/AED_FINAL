@@ -61,6 +61,7 @@ public class ClinicWorkAreaJPanel extends javax.swing.JPanel {
         btnNewPatient = new javax.swing.JButton();
         lblClinic = new javax.swing.JLabel();
         workContainer = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
         setLayout(new java.awt.BorderLayout());
@@ -132,7 +133,7 @@ public class ClinicWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(btnAdministerMedicine)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnNewPatient)
-                .addContainerGap(185, Short.MAX_VALUE))
+                .addContainerGap(376, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(mainMenujPanel);
@@ -140,8 +141,20 @@ public class ClinicWorkAreaJPanel extends javax.swing.JPanel {
         workContainer.setBackground(new java.awt.Color(204, 204, 255));
         workContainer.setLayout(new java.awt.CardLayout());
 
-        jLabel1.setBackground(new java.awt.Color(102, 204, 0));
-        workContainer.add(jLabel1, "card2");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/Clinic/MicrosoftTeams-image (2).png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        workContainer.add(jPanel1, "card2");
 
         jSplitPane1.setRightComponent(workContainer);
 
@@ -179,6 +192,7 @@ public class ClinicWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnNewPatient;
     private javax.swing.JButton btnPlaceMedicineOrder;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JLabel lblClinic;
     private javax.swing.JPanel mainMenujPanel;

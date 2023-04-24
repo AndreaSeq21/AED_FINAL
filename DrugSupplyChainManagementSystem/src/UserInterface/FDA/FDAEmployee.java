@@ -54,6 +54,8 @@ public class FDAEmployee extends javax.swing.JPanel {
         lblMenu = new javax.swing.JLabel();
         btnManageOrder = new javax.swing.JButton();
         workContainer = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setLayout(new java.awt.BorderLayout());
 
@@ -98,7 +100,7 @@ public class FDAEmployee extends javax.swing.JPanel {
                 .addContainerGap()
                 .addGroup(mainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainMenuLayout.createSequentialGroup()
-                        .addGap(0, 2, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(mainMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnManageOrder, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
                             .addComponent(btnOrderMedicine, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -114,13 +116,29 @@ public class FDAEmployee extends javax.swing.JPanel {
                 .addComponent(btnOrderMedicine)
                 .addGap(38, 38, 38)
                 .addComponent(btnManageOrder)
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addContainerGap(601, Short.MAX_VALUE))
         );
 
         jSplitPane1.setTopComponent(mainMenu);
 
         workContainer.setBackground(new java.awt.Color(252, 208, 230));
         workContainer.setLayout(new java.awt.CardLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/FDA/MicrosoftTeams-image (5).png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        workContainer.add(jPanel1, "card2");
+
         jSplitPane1.setRightComponent(workContainer);
 
         add(jSplitPane1, java.awt.BorderLayout.CENTER);
@@ -146,6 +164,8 @@ public class FDAEmployee extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnManageOrder;
     private javax.swing.JButton btnOrderMedicine;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JLabel lblMenu;
     private javax.swing.JPanel mainMenu;

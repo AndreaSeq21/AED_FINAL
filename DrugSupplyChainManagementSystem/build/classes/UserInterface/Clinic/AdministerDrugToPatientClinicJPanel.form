@@ -53,12 +53,21 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="txtManufactureDate" alignment="0" pref="177" max="32767" attributes="0"/>
-                                          <Component id="comboBoxMedicineCodeList" pref="177" max="32767" attributes="0"/>
-                                          <Component id="comboBoxBrand" pref="177" max="32767" attributes="0"/>
-                                          <Component id="comboBoxArm" alignment="0" pref="177" max="32767" attributes="0"/>
+                                          <Group type="102" attributes="0">
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="txtManufactureDate" alignment="0" pref="177" max="32767" attributes="0"/>
+                                                  <Component id="comboBoxArm" alignment="0" pref="177" max="32767" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="-2" pref="338" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                  <Component id="comboBoxMedicineCodeList" alignment="1" min="-2" pref="138" max="-2" attributes="0"/>
+                                                  <Component id="comboBoxBrand" min="-2" pref="138" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                          </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="338" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
