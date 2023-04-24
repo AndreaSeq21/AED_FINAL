@@ -13,9 +13,25 @@ import Business.Network.CityNetwork;
 import Business.Network.StateNetwork;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
+import captcha.GUI;
+import captcha.ImageGenerator;
 import java.awt.CardLayout;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.util.Random;
+import javax.imageio.ImageIO;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
 
 /**
  *
@@ -105,7 +121,7 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(loginPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblWelcomePage, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
+                    .addComponent(lblWelcomePage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblUsernameField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtUsername)
                     .addComponent(lblPasswordField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -150,7 +166,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         lblImage.setBackground(new java.awt.Color(251, 137, 194));
         lblImage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/ICONS/11122021icons/login.jpg"))); // NOI18N
+        lblImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/SC.gif"))); // NOI18N
 
         javax.swing.GroupLayout welcomeScreenLayout = new javax.swing.GroupLayout(welcomeScreen);
         welcomeScreen.setLayout(welcomeScreenLayout);
@@ -158,22 +174,18 @@ public class MainFrame extends javax.swing.JFrame {
             welcomeScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(welcomeScreenLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(welcomeScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(welcomeScreenLayout.createSequentialGroup()
-                        .addComponent(lblProjectName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(welcomeScreenLayout.createSequentialGroup()
-                        .addComponent(lblImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(131, 131, 131))))
+                .addGroup(welcomeScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(lblProjectName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         welcomeScreenLayout.setVerticalGroup(
             welcomeScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(welcomeScreenLayout.createSequentialGroup()
-                .addContainerGap()
+                .addComponent(lblImage, javax.swing.GroupLayout.PREFERRED_SIZE, 693, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(lblProjectName, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lblImage, javax.swing.GroupLayout.PREFERRED_SIZE, 484, Short.MAX_VALUE)
-                .addGap(224, 224, 224))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         container.add(welcomeScreen, "card2");
@@ -185,10 +197,13 @@ public class MainFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+   
+
+
+    
     private void btnLoginUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginUserActionPerformed
         // TODO add your handling code here:
-
-        
+       
         String username = txtUsername.getText();
         if(username.trim().equalsIgnoreCase(""))
         {
@@ -426,4 +441,11 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField txtUsername;
     private javax.swing.JPanel welcomeScreen;
     // End of variables declaration//GEN-END:variables
+
+//    private void displayCaptchaLogic() {
+//        BufferedImage img = new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB);
+//        
+//        jLabel1.setIcon(img);
+////        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 }
