@@ -8,6 +8,8 @@ import Business.Enterprise.Enterprise;
 import Business.Organization.Organization;
 import Business.Person.Person;
 import java.awt.CardLayout;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Date;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
@@ -255,7 +257,7 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "Please enter First Name");
                 return;
             }
-            boolean bFirstName = Pattern.matches("^[A-Za-z0-9 ]*$", firstName);
+            boolean bFirstName = Pattern.matches("^[a-zA-Z]+$", firstName);
             if(!bFirstName){
                 JOptionPane.showMessageDialog(this, "First name field should only have Alphanumeric characters. Special characters are not allowed. Please try again!");
                 txtFirstName.setText("");
@@ -267,7 +269,7 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "Please enter Last Name");
                 return;
             }
-            boolean bLastName = Pattern.matches("^[A-Za-z0-9 ]*$", lastName);
+            boolean bLastName = Pattern.matches("^[a-zA-Z]+$", lastName);
             if(!bLastName){
                 JOptionPane.showMessageDialog(this, "Last name field should only have Alphanumeric characters. Special characters are not allowed. Please try again!");
                 txtLastName.setText("");
@@ -290,7 +292,19 @@ public class ViewPersonJPanel extends javax.swing.JPanel {
                 txtPhone.setText("");
                 return;
             }
-            
+            LocalDate dobValue = jDateDOB.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate(); // convert JDateChooser to LocalDate
+            LocalDate today = LocalDate.now();
+
+            if (dobValue == null) {
+            JOptionPane.showMessageDialog(null, "Please enter your date of birth.");
+            return;
+            }  else if (dobValue.isAfter(today)) {
+                JOptionPane.showMessageDialog(null, "Invalid date of birth. Date cannot be in the future.");
+                return;
+            } else if (dobValue.isEqual(today)) {
+            JOptionPane.showMessageDialog(null, "Invalid date of birth. Date cannot be today.");
+            return;
+            }  
             Date dob = jDateDOB.getDate();
             if (jDateDOB.getDate()== null )
             {

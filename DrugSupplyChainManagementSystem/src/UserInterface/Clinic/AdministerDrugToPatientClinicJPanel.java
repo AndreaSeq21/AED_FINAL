@@ -374,11 +374,16 @@ public class AdministerDrugToPatientClinicJPanel extends javax.swing.JPanel {
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(14, 14, 14)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtManufactureDate, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
-                                            .addComponent(comboBoxMedicineCodeList, 0, 177, Short.MAX_VALUE)
-                                            .addComponent(comboBoxBrand, 0, 177, Short.MAX_VALUE)
-                                            .addComponent(comboBoxArm, 0, 177, Short.MAX_VALUE))
-                                        .addGap(338, 338, 338))))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(txtManufactureDate, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
+                                                    .addComponent(comboBoxArm, 0, 177, Short.MAX_VALUE))
+                                                .addGap(338, 338, 338))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(comboBoxMedicineCodeList, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(comboBoxBrand, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addGap(0, 0, Short.MAX_VALUE))))))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
@@ -478,9 +483,19 @@ public class AdministerDrugToPatientClinicJPanel extends javax.swing.JPanel {
     private void btnAdminMedicineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdminMedicineActionPerformed
         // TODO add your handling code here:
       
+        
         try
         {
-          
+         int count =0;
+         boolean checkDose = (Integer.parseInt(txtDoseNumber.getText()) < 0);
+        if (checkDose) {
+            JOptionPane.showMessageDialog(null, "Please enter a valid dose number");
+               count = 1;
+               System.out.println("Inside dose validation");
+            }
+       
+ 
+               
              VaccineDetails vp = (VaccineDetails)comboBoxMedicineCodeList.getSelectedItem();
             String vaccineCode = vp.getVaccineDefinition().getVaccineCode();
         
@@ -564,8 +579,12 @@ public class AdministerDrugToPatientClinicJPanel extends javax.swing.JPanel {
                 }
             }
         
+   
         
-        if (flagg==2){
+        
+        if(count == 0)
+        {
+              if (flagg==2){
         int dose = Integer.parseInt(txtDoseNumber.getText());
         administeredVaccine.setDoseNumber(dose);
         administeredVaccine.setshotstatus(status);
@@ -596,7 +615,11 @@ public class AdministerDrugToPatientClinicJPanel extends javax.swing.JPanel {
        
         JOptionPane.showMessageDialog(null, "Vaccination Done!");
      
-        }}
+        }
+        }
+       
+        
+      }
         catch(NumberFormatException e)
         {
             JOptionPane.showMessageDialog(null, "Please enter numeric data in dose field");
