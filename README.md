@@ -41,10 +41,13 @@ Conclusion : Effective drug supply chain management is essential for ensuring th
 Contributions :
 
 Andrea Sequeria:
+
 FDA enterprise, Enterprise Admin, State Health Department Enterprise, Validations, Integration with Java Classes.
 
 Bhagyashri Chavan:
+
 System Admin panels, Distributor enterprise, Clinic enterprise, Mail feature, Integration with Java Classes. 
 
 Rutuja Patil:
+
 Manufacturer enterprise, Dashboards, Patient enterprise, Provider enterprise, Integration with Java Classes.
