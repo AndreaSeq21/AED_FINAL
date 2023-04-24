@@ -47,6 +47,7 @@ public class ManufactureEmployeeWorkAreaJPanel extends javax.swing.JPanel {
         jSplitPane1 = new javax.swing.JSplitPane();
         workContainer = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         mainMenu = new javax.swing.JPanel();
         btnManufactureDrugProducts = new javax.swing.JButton();
         btnManageOrder = new javax.swing.JButton();
@@ -62,15 +63,17 @@ public class ManufactureEmployeeWorkAreaJPanel extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(252, 208, 230));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/Manufacture/MicrosoftTeams-image (6).png"))); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1631, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 692, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1200, Short.MAX_VALUE)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 597, Short.MAX_VALUE)
         );
 
         workContainer.add(jPanel1, "card2");
@@ -125,7 +128,7 @@ public class ManufactureEmployeeWorkAreaJPanel extends javax.swing.JPanel {
                 .addComponent(btnManufactureDrugProducts)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnManageOrder)
-                .addContainerGap(937, Short.MAX_VALUE))
+                .addContainerGap(334, Short.MAX_VALUE))
         );
 
         jSplitPane1.setTopComponent(mainMenu);
@@ -154,6 +157,7 @@ public class ManufactureEmployeeWorkAreaJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnManageOrder;
     private javax.swing.JButton btnManufactureDrugProducts;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JLabel lblManufacturer;
