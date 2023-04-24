@@ -13,6 +13,13 @@ Solution :
  The drug supply chain typically involves several stakeholders, including drug manufacturers, distributors, wholesalers, Clinics, hospitals, and patients. Effective management of the drug supply chain requires collaboration and communication among these stakeholders to ensure that drugs are available when needed, in the right quantity, and at the right cost.
  For a  drug  supply  chain  management  system is  to  design  and implement an efficient and secure system that can address these challenges and ensure the quality and safety of pharmaceutical products throughout the supply chain. This system should provide real-time  visibility  into  the  supply  chain,  facilitate  the  tracking  and  tracing  of  drugs,  prevent counterfeit  drugs  from  entering  the  supply  chain,  manage  inventory  levels  to  prevent  drug shortagesand enable quick response to supply chain disruptions. The system should also comply with relevant regulations and industry standards to ensure the safety and efficacy of drugs.
 
+
+![MicrosoftTeams-image (5)](https://user-images.githubusercontent.com/113729641/233875803-dc646c48-ccbb-4667-8203-2071bb06725f.png)
+
+![MicrosoftTeams-image (6)](https://user-images.githubusercontent.com/113729641/233875837-d7609af7-f742-4f8c-b297-08d7f267f913.png)
+
+![AED Final Project_Component Diagram](https://user-images.githubusercontent.com/113729641/233875844-af30b2de-656e-4ba4-8530-5dc540a2a40a.jpeg)
+
 Key components of drug supply chain management include:
 
 Drug manufacturing: The process of producing drugs, which includes sourcing of raw materials, formulation, testing, and packaging.
